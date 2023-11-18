@@ -8,6 +8,7 @@ export default function ComparaNumeros() {
   const [resultado, setResultado] = useState()
 
   function handleVerificar(){
+    setResultado('')
     if(n1 < n2){
         setResultado('menor')
     }
@@ -23,7 +24,8 @@ export default function ComparaNumeros() {
          placeholder='Informe numero 1' 
          value={n1} 
          onChangeText={(text)=>setN1(text)} 
-         keyboardType="numeric"      
+         keyboardType="numeric" 
+         onKeyPress={()=>setResultado('')}     
       />
 
       <TextInput 
@@ -31,7 +33,8 @@ export default function ComparaNumeros() {
          placeholder='Informe numero 2'
          value={n2}
          onChangeText={(text)=>setN2(text)} 
-         keyboardType="numeric"         
+         keyboardType="numeric" 
+         onKeyPress={()=>setResultado('')}         
       />
 
       <TouchableOpacity
