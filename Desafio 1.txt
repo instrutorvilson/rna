@@ -1,0 +1,7 @@
+1) Criar um componente que receba o nome e idade de uma pessoa e mostre se ela é maior ou menor de idade, considera-se menor de idade quem tem menos de 18 anos;
+
+2)Criar componente que permita informar dois numeros e mostre qual deles é o maior;
+
+3) Criar um componente que permita informar o cep e retornar as informações de logradouro, cidade, bairro, e uf.
+
+https://github.com/instrutorvilson/rna
