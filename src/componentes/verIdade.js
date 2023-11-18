@@ -29,7 +29,8 @@ export default function VerIdade() {
          style={styles.input}
          placeholder='Informe seu idade'
          value={idade}
-         onChangeText={(text)=>setIdade(text)}          
+         onChangeText={(text)=>setIdade(text)} 
+         keyboardType="numeric"         
       />
 
       <TouchableOpacity
@@ -39,7 +40,7 @@ export default function VerIdade() {
           <Text>Verificar</Text>
       </TouchableOpacity>  
       <View>
-           <Text style={styles.resultado}>{nome} vc é {resultado} de idade.</Text>
+         {resultado && <Text style={styles.resultado}>{nome} vc é {resultado} de idade.</Text>}
       </View>       
       
     </View>
