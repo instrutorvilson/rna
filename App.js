@@ -1,23 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import ComparaNumeros from './src/componentes/comparaNumeros';
 import Endereco from './src/componentes/endereco';
 import VerIdade from './src/componentes/verIdade';
-import styles from './src/estilos/estilos';
+import Menu from './src/componentes/menu';
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Meu progama</Text>
-      
-     { 
-       /*<VerIdade /> 
-         <ComparaNumeros 
-         />*/
-         <Endereco />
-      }   
+    <NavigationContainer>
+      <Stack.Navigator>
+          <Stack.Screen name='Menu' component={Menu}/>
+          <Stack.Screen name='Idades' component={VerIdade}/>
+          <Stack.Screen name='VerificaNumeros' component={ComparaNumeros}/>
+          <Stack.Screen name='Endereco' component={Endereco}/>
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 

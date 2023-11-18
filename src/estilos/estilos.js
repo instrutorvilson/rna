@@ -14,13 +14,16 @@ const styles = StyleSheet.create({
         backgroundColor: "#dbfcff",
         width:300,
         borderRadius:15,
-        fontSize: 18
+        fontSize: 18,
+        alignSelf: 'center'
     },
     btacao:{
         backgroundColor:'#4ab3ff',
         alignItems:'center',
         padding: 15,
-        borderRadius: 15
+        borderRadius: 15,
+        width:100,
+        alignSelf:'center'
     },
     title:{
         fontSize: 24,
@@ -30,6 +33,15 @@ const styles = StyleSheet.create({
     resultado:{
         marginTop: 30,
         fontSize: 16
+    },
+    itemMenu:{
+        backgroundColor:'#4ab3ff',
+        alignItems:'center',
+        padding: 15,
+        borderRadius: 15,
+        width:150,
+        marginVertical: 20,
+        alignSelf: 'center'
     }
   });
 
