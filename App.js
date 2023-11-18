@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Toast from 'react-native-toast-message';
 
-import { Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import ComparaNumeros from './src/componentes/comparaNumeros';
 import Endereco from './src/componentes/endereco';
 import VerIdade from './src/componentes/verIdade';
@@ -20,6 +20,7 @@ export default function App() {
           <Stack.Screen name='Endereco' component={Endereco}/>
       </Stack.Navigator>
       <StatusBar style="auto" />
+      <Toast />
     </NavigationContainer>
   );
 }
