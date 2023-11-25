@@ -6,7 +6,7 @@ import app from '../configuracao/firebaseConfig'
 import { getFirestore, collection, addDoc } 
 from "firebase/firestore"
 
-export default function CadContato() {
+export default function CadContato({ navigation }) {
   const[nome, setNome] = useState('')
   const[email, setEmail] = useState('')
   const[fone, setFone] = useState('')
@@ -47,7 +47,10 @@ export default function CadContato() {
     type: 'success',
     text1: 'Atenção!',
     text2: 'Contato salvo com sucesso'
-  });
+   });
+ 
+   setTimeout(()=>navigation.navigate('Consulta'),3000)
+   
 
   }
   return (
