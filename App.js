@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import Toast from 'react-native-toast-message';
 import { View } from 'react-native';
 
 import styles from './src/estilos/estilos';
@@ -23,6 +24,7 @@ export default function App() {
       </NavigationContainer>
 
       <StatusBar style="auto" />
+      <Toast />
     </View>
   );
 }
