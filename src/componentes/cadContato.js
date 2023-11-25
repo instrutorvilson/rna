@@ -2,11 +2,16 @@ import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import styles from '../estilos/estilos';
 import Toast from 'react-native-toast-message';
 import { useState } from 'react';
+import app from '../configuracao/firebaseConfig'
+import { getFirestore, collection, addDoc } 
+from "firebase/firestore"
 
 export default function CadContato() {
   const[nome, setNome] = useState('')
   const[email, setEmail] = useState('')
   const[fone, setFone] = useState('')
+  
+  const db = getFirestore(app)
 
   function handleGravar(){
      if(nome == ''){
@@ -36,6 +41,8 @@ export default function CadContato() {
    }
 
    /**codigo firebase */
+   addDoc(collection(db,"contatos"),{nome,email,fone})
+
    Toast.show({
     type: 'success',
     text1: 'Atenção!',
