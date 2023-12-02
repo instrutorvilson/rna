@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
     botoes:{
        display:'flex',
        flexDirection:'row',
-       justifyContent: 'space-between',
-       marginTop: 15     
+       justifyContent:'space-between'
     },
     title:{
         fontSize: 24,

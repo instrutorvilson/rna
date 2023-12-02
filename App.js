@@ -9,6 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/componentes/home';
 import CadContato from './src/componentes/cadContato';
 import ConsultaContatos from './src/componentes/consultaContatos';
+import Login from './src/componentes/login';
+import CadUser from './src/componentes/cadUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,8 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Consulta" component={ConsultaContatos} />
           <Stack.Screen name="Cadastro" component={CadContato} />
+          <Stack.Screen name="CadUser" component={CadUser} />
+          <Stack.Screen name="Login" component={Login} />
         </Stack.Navigator>
       </NavigationContainer>
 
