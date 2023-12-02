@@ -34,8 +34,7 @@ export default function ConsultaContatos({navigation}) {
           loadFirebase()
       }else{
          navigation.navigate('Login')
-      }
-     
+      }     
   },[])
 
   return (
