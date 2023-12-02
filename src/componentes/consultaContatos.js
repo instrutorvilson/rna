@@ -18,7 +18,15 @@ export default function ConsultaContatos({navigation}) {
   
   async function loadFirebase(){
       let query = await getDocs(collection(db,"contatos"))
-      query.forEach((doc) => setContatos((ant)=>[...ant,doc.data()]))
+      query.forEach((doc) => { 
+        let obj ={
+          id: doc.id,
+          nome: doc.data().nome,
+          email: doc.data().email,
+          fone: doc.data().fone
+        }
+        setContatos((ant)=>[...ant, obj])
+      })
   }
 
   useEffect(()=>{
@@ -36,6 +44,7 @@ export default function ConsultaContatos({navigation}) {
          data={contatos}
          renderItem={({item}) => <CardContato
             contato={item}
+            navigation={navigation}
          />}
        />
       </View>
