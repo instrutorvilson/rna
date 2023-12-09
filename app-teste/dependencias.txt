@@ -1,0 +1,11 @@
+https://jestjs.io/docs/getting-started
+
+https://callstack.github.io/react-native-testing-library/docs/getting-started
+
+O que teste unitário?
+
+npx expo install jest-expo jest
+npm i --save-dev @types/jest
+
+npm install --save-dev @testing-library/react-native
+npm install --save-dev @testing-library/jest-native
