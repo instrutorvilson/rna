@@ -1,0 +1,3 @@
+https://jestjs.io/docs/getting-started
+
+https://callstack.github.io/react-native-testing-library/docs/getting-started
