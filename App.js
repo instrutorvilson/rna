@@ -23,6 +23,7 @@ export default function App() {
     <>
      <NavigationContainer theme={{colors:{background:'green'}}}>
           <Drawer.Navigator
+            initialRouteName="Home"
             screenOptions={{
               drawerStyle: {
                  backgroundColor: 'lightblue', 
@@ -35,17 +36,29 @@ export default function App() {
               <Drawer.Screen 
                  name="Home" 
                  component={Home}
-                 options={{ drawerIcon:({color, size}) => <Icon name='home' size={size} color={color}/> }}
+                 options={{ 
+                   drawerIcon:({color, size}) => <Icon name='home' size={size} color={color}/>,
+                   title:'Agenda de Contatos',
+                   drawerLabel: 'Home'
+                  }}
               />
               <Drawer.Screen 
                   name="Cadastro" 
                   component={Cadastro}
-                  options={{ drawerIcon:({color, size}) => <Icon name='plus' size={size} color={color}/> }}
+                  options={{ 
+                    drawerIcon:({color, size}) => <Icon name='plus' size={size} color={color}/>,
+                    drawerLabel: 'Novo Contato',
+                    title:'Cadastrar Contato'  
+                  }}
                 />
               <Drawer.Screen 
                   name="Consulta" 
                   component={Consulta}
-                  options={{ drawerIcon:({color, size}) => <Icon name='search' size={size} color={color}/> }}
+                  options={{ 
+                    drawerIcon:({color, size}) => <Icon name='search' size={size} color={color}/>,
+                    drawerLabel: 'Listar Contatos',
+                    title:'Listando Contatos'   
+                  }}
               />
           </Drawer.Navigator>
        </NavigationContainer>      
