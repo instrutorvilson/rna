@@ -12,11 +12,26 @@ import Home from './src/componentes/home';
 
 const Drawer = createDrawerNavigator();
 
+const customTheme = {
+   colors: {
+     background: '#F0F0F0', // Change background color here
+  },
+};
+
 export default function App() {
   return (
     <>
-     <NavigationContainer>
-          <Drawer.Navigator>
+     <NavigationContainer theme={{colors:{background:'green'}}}>
+          <Drawer.Navigator
+            screenOptions={{
+              drawerStyle: {
+                 backgroundColor: 'lightblue', 
+            },
+            drawerActiveTintColor: 'blue', 
+            drawerInactiveTintColor: 'black', 
+          }}
+          
+          >
               <Drawer.Screen 
                  name="Home" 
                  component={Home}
