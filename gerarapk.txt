@@ -1,0 +1,24 @@
+> gerar apk
+https://docs.expo.dev/build-reference/apk/
+
+> Criar arquivo eas.json na raiz do projeto
+
+{
+  "build": {
+    "gerarapk": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {}
+  }
+}
+
+Instalar cli do eas
+>npm install  eas-cli
+
+Fazer login na conta expo
+> eas login
+
+executar comando
+> eas build -p android --profile gerarapk
