@@ -51,6 +51,13 @@ const styles = StyleSheet.create({
        flexDirection:'row',
        justifyContent:'space-between'
     },
+    btlogout:{
+        backgroundColor:'red',
+        alignItems:'center',
+        borderRadius: 5,
+        padding:5,
+        width:100        
+    },
     title:{
         fontSize: 24,
         color: 'blue',

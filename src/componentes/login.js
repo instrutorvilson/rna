@@ -33,6 +33,8 @@ export default function Login({navigation}) {
           var user = await signInWithEmailAndPassword(auth, email, senha)
           var token = await user.user.getIdToken()
           localStorage.setItem('token',token)
+          //navega para home
+          navigation.navigate('Home')
        }
        catch(error){
           if (error){
